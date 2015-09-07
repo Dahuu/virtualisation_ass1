@@ -3,12 +3,11 @@ FROM ubuntu:14.04
 MAINTAINER Dean Huakau "deanhuakau@hotmail.co.nz"
 
 RUN apt-get -yqq update
+RUN apt-get -yqq upgrade
+
 RUN apt-get -yqq install apache2
 
-
-
 RUN apt-get -yqq install supervisor
-
 
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
@@ -23,8 +22,6 @@ ENV APACHE_LOCK_DIR /var/lock/apache2
 
 RUN mkdir -p $APACHE_RUN_DIR $APACHE_LOCK_DIR $APACHE_LOG_DIR
 EXPOSE 80
-
-
 
 CMD ["/usr/bin/supervisord"]
 
