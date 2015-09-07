@@ -1,5 +1,6 @@
 # version 1.0.0
-From ubuntu:14.04
+FROM ubuntu:14.04
+
 MAINTAINER Dean Huakau "deanhuakau@hotmail.co.nz"
 
 
