@@ -7,8 +7,8 @@ Requires=data-container@%i.service
 TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill web-server1
 ExecStartPre=-/usr/bin/docker rm web-server1
-ExecStartPre=/usr/bin/docker pull Dahuu/virtualisation_assn1_web
-ExecStart=/usr/bin/docker run --rm --name web-server1 Dahuu/virtualisation_assn1_web --volumes-from data-container1 -D FOREGROUND
+ExecStartPre=/usr/bin/docker pull Dahuu/virtualisation_assn_web_server
+ExecStart=/usr/bin/docker run --rm --name web-server1 Dahuu/virtualisation_assn1_web_server --volumes-from data-container1 -D FOREGROUND
 ExecStop=/usr/bin/docker stop web-server1
 
 [X-Fleet]
