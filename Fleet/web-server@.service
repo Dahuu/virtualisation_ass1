@@ -13,3 +13,4 @@ ExecStop=/usr/bin/docker stop web-server1
 
 [X-Fleet]
 Conflicts=web-server@*.service
+X-ConditionMachineOf=data-container@%i.service
