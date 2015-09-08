@@ -8,7 +8,7 @@ COPY index.html /var/www/html/index.html
 
 VOLUME ["var/www/html"]
 
-ENTRYPOINT [ "/bin/sh", "-c", "while true; do echo im a datacontainer mate; sleep 60; done" ]
+ENTRYPOINT [ "/bin/sh", "-c", "while true; do echo im deans datacontainer ; sleep 60; done" ]
 
 
 
