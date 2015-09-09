@@ -3,6 +3,7 @@ FROM ubuntu:14.04
 
 MAINTAINER Dean Huakau "deanhuakau@hotmail.co.nz"
 
+RUN apt-get -yqq update
 
 COPY index.html /var/www/html/index.html
 
